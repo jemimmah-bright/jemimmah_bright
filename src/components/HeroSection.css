@@ -1,0 +1,234 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: linear-gradient(135deg, var(--bg-main) 0%, #e6f5ec 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background elements */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(10, 77, 46, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-name {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.hero-name span {
+  color: var(--primary-light);
+}
+
+.hero-titles {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Image styling */
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.2s;
+}
+
+.hero-image-backdrop {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+  transform: translate(-10px, 10px);
+}
+
+.hero-image {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: 0 20px 40px rgba(10, 77, 46, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating tags */
+.floating-tag {
+  position: absolute;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  font-size: 0.9rem;
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+}
+
+.tag-1 {
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.tag-2 {
+  bottom: 20%;
+  left: 0%;
+  animation-delay: 1s;
+}
+
+.tag-3 {
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 2s;
+  background: var(--primary);
+  color: white;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 968px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-name {
+    font-size: 3rem;
+  }
+  
+  .hero-titles {
+    font-size: 1.5rem;
+  }
+  
+  .hero-image {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .hero-image-backdrop {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
