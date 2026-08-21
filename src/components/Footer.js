@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaTiktok, FaXTwitter } from 'react-icons/fa6';
+import { FaInstagram, FaTiktok, FaXTwitter, FaLinkedin } from 'react-icons/fa6';
 import './Footer.css';
 
 const Footer = () => {
@@ -35,6 +35,9 @@ const Footer = () => {
               </a>
               <a href="https://x.com/jemkyelzb?s=11" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaXTwitter />
+              </a>
+              <a href="https://www.linkedin.com/in/jemimmah-bright-432ab5336/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin />
               </a>
             </div>
           </div>
