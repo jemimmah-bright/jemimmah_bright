@@ -10,6 +10,12 @@ const Projects = () => {
       link: "https://eunikareinternational.org"
     },
     {
+      title: "OTP Mobile",
+      description: "A modern React-based web application focused on seamless user interactions and responsive design.",
+      type: "Web Application",
+      link: "https://otp-mobile-u1qn.onrender.com"
+    },
+    {
       title: "kayzonle.com",
       description: "A modern, responsive website developed to meet specific business needs, focusing on performance, clean aesthetics, and data management.",
       type: "Business Website",
