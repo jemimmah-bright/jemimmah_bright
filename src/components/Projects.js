@@ -26,6 +26,30 @@ const Projects = () => {
       description: "A feature-rich application designed and developed for media consumption, highlighting expertise in app design, UI/UX, and complex system architecture.",
       type: "Mobile Application",
       link: "#"
+    },
+    {
+      title: "Israel Graphic Design",
+      description: "A creative graphics design project showcasing visual storytelling.",
+      type: "Graphics Design",
+      link: "/isreal.jpeg"
+    },
+    {
+      title: "JBS Discounts Banner",
+      description: "A promotional discount banner designed for JBS, focusing on clear communication and aesthetics.",
+      type: "Graphics Design",
+      link: "/jbs%20discounts.png"
+    },
+    {
+      title: "Promotional Flyer",
+      description: "An eye-catching flyer design crafted for marketing and promotional campaigns.",
+      type: "Graphics Document",
+      link: "/flye1.pdf"
+    },
+    {
+      title: "Discounts Portfolio",
+      description: "A detailed presentation document highlighting various discount offers and promotional strategies.",
+      type: "Graphics Document",
+      link: "/discounts.pdf"
     }
   ];
 
